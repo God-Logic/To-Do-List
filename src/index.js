@@ -23,17 +23,6 @@ let tasks = [
   },
 ];
 
-function clearCompletedTasks() {
-  tasks.forEach((task) => {
-    if (task.completed) {
-      const taskItem = document.querySelector(`[data-index="${task.index}"]`);
-      taskItem.parentNode.removeChild(taskItem);
-    }
-  });
-
-  tasks = tasks.filter((task) => !task.completed);
-}
-
 function renderTasks() {
   const taskList = document.getElementById('task-list');
 
