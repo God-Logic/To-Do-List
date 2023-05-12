@@ -29,7 +29,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 PORTFOLIO WEBSITE <a name="about-project"></a>
+# 📖 TO-DO-LIST <a name="about-project"></a>
 
 **To do list ** is a app which allows users to add/remove daily tasks from a list and add new task, this is designed to help one plan their day and mark of the tasks that they have completed.
 
@@ -72,7 +72,7 @@ In order to run this project you need:
 
 ### Setup
 
-Clone this repository to your desired folder:
+Clone this repository to your desired folder:https://github.com/God-Logic/To-Do-List/tree/structure
 
 cd my-folder
 git clone 
@@ -80,7 +80,7 @@ git clone
 
 ### Install
 
-To install this project run this into your terminal:
+To install this project run this into your terminal:https://github.com/God-Logic/To-Do-List/tree/structure
 
 + git clone 
 
@@ -164,6 +164,6 @@ I would like to thank everyone who made this project possible
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](./LICENSE.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
