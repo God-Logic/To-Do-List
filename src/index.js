@@ -2,7 +2,7 @@ import './style.css';
 import MyImage from './images/dots.png';
 import EnterIcon from './images/enter.png';
 
-let tasks = [
+const tasks = [
   {
     description: 'Task 1',
     completed: false,
@@ -65,7 +65,6 @@ function renderTasks() {
   const clearButton = document.createElement('button');
   clearButton.id = 'clear-button';
   clearButton.textContent = 'Clear All Completed';
-  clearButton.addEventListener('click', clearCompletedTasks);
   taskList.appendChild(clearButton);
 }
 
