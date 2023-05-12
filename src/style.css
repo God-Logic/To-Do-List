@@ -1,7 +1,66 @@
-body {
-  background-color: bisque;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap');
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
-.hello {
-  color: red;
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: solid rgb(168, 168, 168) 1px;
+  font-size: 24px;
+}
+
+ul img {
+  width: 30px;
+}
+
+body {
+  padding: 20%;
+}
+
+#task-list {
+  margin-bottom: 0;
+}
+
+.list-container {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 7px  2px 7px #f3f3f3;
+}
+
+#clear-button {
+  border: solid 1px rgb(246, 246, 246);
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  color: rgb(168, 168, 168);
+  background-color: rgb(243, 243, 243);
+}
+
+.task-item.add-new {
+  color: rgb(168, 168, 168);
+  font-style: italic;
+}
+
+h1 {
+  padding: 0 20px;
+}
+
+.task-checkbox {
+  margin-right: 20px;
+}
+
+li img {
+  width: 30px;
 }
