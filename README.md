@@ -46,9 +46,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **displays all the books in the collection**
-- **can add new books to the collection**
-- **can remove existing books from the collection**
+- **displays all Tasks that you need to work on**
+- **can add new task to the daily task**
+- **can remove tasks that are completed**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
