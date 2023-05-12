@@ -71,37 +71,19 @@ In order to run this project you need:
 
 
 ### Setup
-
-Clone this repository to your desired folder:https://github.com/God-Logic/To-Do-List/tree/structure
-
-cd my-folder
-git clone 
-
-
-### Install
-
-To install this project run this into your terminal:https://github.com/God-Logic/To-Do-List/tree/structure
-
-+ git clone 
-
-
-### Usage
-
-To run the project: 
-+ double-click on the index.html file to open on your web browser
-
-
-### Run tests
-
-No test run is required as this website is built with just html5 & css3
-
-
-### Deployment
-
-You can deploy this project:
-+ on any hosting services
-
-
+- Clone this repository to your desired folder
+-> Open your folder
+```bash
+cd 'Your folder name'
+```
+-> Clone the project 
+```bash
+git clone https://github.com/God-Logic/To-Do-List/tree/structure
+```
+-> Open the project folder
+```bash
+cd To-Do-List
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
