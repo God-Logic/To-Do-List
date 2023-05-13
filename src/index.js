@@ -1,71 +1,79 @@
+import '@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-free/js/all.js';
 import './style.css';
-import MyImage from './images/dots.png';
-import EnterIcon from './images/enter.png';
 
-const tasks = [
-  {
-    description: 'Task 1',
-    completed: false,
-    index: 1,
-    icon: MyImage,
-  },
-  {
-    description: 'Task 2',
-    completed: true,
-    index: 2,
-    icon: MyImage,
-  },
-  {
-    description: 'Task 3',
-    completed: false,
-    index: 3,
-    icon: MyImage,
-  },
-];
+const taskList = document.getElementById('task-list');
+const newTaskForm = document.getElementById('new-task-form');
+const newTaskInput = document.querySelector('.new-task-input');
+const removeButton = document.querySelector('.remove-button');
+
+let tasks = [];
+
+function toggleTaskCompleted(taskItem, index) {
+  tasks[index].completed = !tasks[index].completed;
+  taskItem.classList.toggle('completed');
+}
 
 function renderTasks() {
-  const taskList = document.getElementById('task-list');
+  // Clear existing tasks in the task list
+  taskList.innerHTML = '';
 
-  const addNewPlaceholder = document.createElement('li');
-  addNewPlaceholder.className = 'task-item add-new';
-  addNewPlaceholder.innerHTML = `
-    <span class="task-description">Add new item</span>
-    <img src="${EnterIcon}" class="enter-icon">
-  `;
-  taskList.prepend(addNewPlaceholder);
-
-  tasks.forEach((task) => {
+  // Render all tasks
+  tasks.forEach((task, index) => {
+    // Create task item element
     const taskItem = document.createElement('li');
     taskItem.className = 'task-item';
-    taskItem.dataset.index = task.index;
+    taskItem.dataset.index = index;
 
-    const taskContent = document.createElement('div');
-    taskContent.className = 'task-content';
-    taskItem.appendChild(taskContent);
-
+    // Create task checkbox element
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.checked = task.completed;
     checkbox.className = 'task-checkbox';
-    taskContent.appendChild(checkbox);
+    checkbox.addEventListener('change', () => {
+      toggleTaskCompleted(taskItem, index);
+    });
+    taskItem.appendChild(checkbox);
 
-    const description = document.createElement('span');
+    // Create task description element
+    const description = document.createElement('div');
     description.textContent = task.description;
     description.className = 'task-description';
-    taskContent.appendChild(description);
+    taskItem.appendChild(description);
 
-    const icon = document.createElement('img');
-    icon.src = `${task.icon}`;
+    // Create task icon element
+    const icon = document.createElement('button');
+    icon.innerHTML = '<i class="fa fa-ellipsis-v fa-xl"></i>';
     icon.className = 'task-icon';
     taskItem.appendChild(icon);
 
+    // Append task item to task list
     taskList.appendChild(taskItem);
   });
-
-  const clearButton = document.createElement('button');
-  clearButton.id = 'clear-button';
-  clearButton.textContent = 'Clear All Completed';
-  taskList.appendChild(clearButton);
 }
 
-renderTasks();
+function addNewTask(event) {
+  event.preventDefault();
+  const taskDescription = newTaskInput.value.trim();
+  if (taskDescription) {
+    const newTask = {
+      description: taskDescription,
+      completed: false,
+      icon: './images/dots.png',
+    };
+    tasks.push(newTask);
+    newTaskInput.value = '';
+    renderTasks();
+  }
+}
+
+function clearCompletedTasks() {
+  tasks = tasks.filter((task) => !task.completed);
+  renderTasks();
+}
+
+// Add event listener for adding a new task
+newTaskForm.addEventListener('submit', addNewTask);
+
+// Add event listener for removing completed tasks
+removeButton.addEventListener('click', clearCompletedTasks);

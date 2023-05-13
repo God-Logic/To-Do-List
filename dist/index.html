@@ -7,9 +7,20 @@
 <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
 <body>
     <div class="list-container">
-        <h1>Today's To-Do List</h1>
-
+        <div class="task-header">
+            <h1>Today's To-Do List</h1>
+            <img src="./images/refresh.png" alt="refresh-ic">
+        </div>
+        <form id="new-task-form" class="task-form">
+            <div class="input-area task-item add-new ">
+                <input type="text" class="new-task-input" placeholder="Add new item...">
+                <img src="./images/enter.png" alt="enter-icon">
+            </div>
+        </form>
         <ul id="task-list"></ul>
+        <button class="remove-button">Remove completed task</button>
     </div>
+ 
+    <script src="bundle.js"></script>
 </body>
 </html>

@@ -7,9 +7,20 @@
 </head>
 <body>
     <div class="list-container">
-        <h1>Today's To-Do List</h1>
-
+        <div class="task-header">
+            <h1>Today's To-Do List</h1>
+            <i class="fa fa-refresh"></i>
+        </div>
+        <form id="new-task-form" class="task-form">
+            <div class="input-area ">
+                <input type="text" class="new-task-input" placeholder="Add new item...">
+                <i class="fa fa-sign-in"></i>
+            </div>
+        </form>
         <ul id="task-list"></ul>
+        <button class="remove-button">Remove completed task</button>
     </div>
+ 
+    <script src="bundle.js"></script>
 </body>
 </html>
