@@ -30,6 +30,18 @@ body {
   margin-bottom: 0;
 }
 
+ /* #new-task-form{ 
+  display: flex;
+  flex-direction: column;
+}  */
+
+
+input{
+border-style: none;
+font-size: 24px;
+background-color: aliceblue;
+}
+
 .list-container {
   width: 50%;
   position: absolute;
